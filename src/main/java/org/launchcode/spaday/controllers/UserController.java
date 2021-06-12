@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.*;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -43,6 +44,7 @@ public class UserController {
             return "user/add";
         }
     }
+
     @GetMapping("details/{userId}")
     public String displayUser(Model model , @PathVariable int userId ){
         User user = UserData.getById(userId);
